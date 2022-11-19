@@ -27,7 +27,7 @@
 
 'minus': "-",
 
-'times': "*",
+'multiply': "*",
 
 'divide': "/"
 
