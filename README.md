@@ -17,7 +17,7 @@
 
 'finish': "END",
 
-'COND': "COND",
+'cond': "cond",
 
 'REFRESH': "REFRESH"
 
@@ -45,7 +45,7 @@
 
 'notE': "!="
 
-'ASSIGNMENT': "="
+'assign': "="
 
 **Miscellaneous**
 
@@ -53,23 +53,23 @@
 
 'right': ")",
 
-'BLOCKSTART': "{",
+'blockOpen': "{",
 
-'BLOCKEND': "}",
+'blockClose': "}",
 
-'MODULE': "%",
+'mod': "%",
 
-'FLOORDVSON': "$"
+'FLRDIV': "$"
 
 **Data Types**
 
-small (8-bits) -> -128 to 127
+SMALL (8-bits) -> -128 to 127
 
-medium (16-bits) -> -32,768 to 32,767
+MEDIUM (16-bits) -> -32,768 to 32,767
 
-large (32-bits) -> -2,147,483,648 to 2,147,483,647
+LARGE (32-bits) -> -2,147,483,648 to 2,147,483,647
 
-gargantuan (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
+GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 
 **Production Rules**
