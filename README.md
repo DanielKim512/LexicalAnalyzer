@@ -13,9 +13,9 @@
 
 **Keyword Indicators**
 
-'START': "START",
+'start': "BEGIN",
 
-'FINISH': "FINISH",
+'finish': "END",
 
 'COND': "COND",
 
