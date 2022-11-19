@@ -1,0 +1,13 @@
+begin
+
+  SMALL varOne;; 
+  varOne = 10 + (2 +5)
+
+  cond ( varOne > = 20 {
+    varOne = 50
+  }
+
+  SMALL varTwo
+  varTwo = varOne +10
+
+end

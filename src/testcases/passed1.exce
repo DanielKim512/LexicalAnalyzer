@@ -1,0 +1,16 @@
+begin
+
+  SMALL varOne;
+  varOne = 5;
+
+  GARGANTUAN varTwo;
+  varTwo = 90 + 100 + (2 + (5 * 2)) * varOne;
+
+  cond (varOne != varTwo) {
+    cond (varOne <= varTwo) {
+      varOne = varTwo * 2;
+    }
+  }
+
+end
+

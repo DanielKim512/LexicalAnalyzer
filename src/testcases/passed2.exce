@@ -1,0 +1,12 @@
+begin 
+  SMALL varThree;
+  varThree = 0;
+
+  repeat (varThree <= 5) {
+    varThree = varThree + 1;
+
+    cond (varThree == 3) {
+      varThree = varThree * 2;
+    }
+  }
+end

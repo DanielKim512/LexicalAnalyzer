@@ -1,0 +1,14 @@
+begin
+
+    SMALL varOne = 5 / (2 + 3);
+
+    SMALL varTwo = 10000;
+
+    LARGE 3var = 100;
+
+    cond ( varOne >= 20 {
+        varOne = 5$0;
+    }
+
+    MEDIUM 4var = 400;
+end
