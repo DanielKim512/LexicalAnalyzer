@@ -115,6 +115,6 @@
     E --> a                 Factor can be a constant   
     E --> (e)               Factor can be an expression in parentheses
     
-    The production rule set conforms to the standard of an LL Grammar. It should be read from left to right.
+    The production rule set conforms to the standard of an LL Grammar and is not ambiguous. It should be read from left to right.
 
 
