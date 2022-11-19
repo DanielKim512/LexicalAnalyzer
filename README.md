@@ -3,7 +3,11 @@
 # Lexical Rules
 
 1) The code must begin with the word "begin" and end with the word "end". Everything in between these two words will be considered the statement input.
-2) Each lexeme/token must be clearly separated with a space.
+2) Each lexeme/token must clearly separate multiple statements with a space.
+3) Each integer literal has a memory stored in 1 byte, 2 byte, 4 byte, or 8 byte. Naming convention shown below.
+4) Variables should have the ability to be declared on separate lines from the assignment of the variable.
+5) Variable names have a maximum of 8 letters and a minimum of 6 letters. Underscores allowed, but numbers not allowed.
+6) Handles keywords for loops, data type declaration, and selection statements. Keywords created below.
 
 # Statements
 
