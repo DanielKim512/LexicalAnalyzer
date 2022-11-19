@@ -16,13 +16,13 @@
 
 **Keyword Indicators**
 
-'start': "BEGIN",
+    'start': "BEGIN",
 
-'finish': "END",
+    'finish': "END",
 
-'cond': "cond",
+    'cond': "cond",
 
-'repeat': "repeat"
+    'repeat': "repeat"
 
 **Arithmetic Order of Operations**
 
