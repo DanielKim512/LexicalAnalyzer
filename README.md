@@ -2,7 +2,7 @@
 
 # Lexical Rules
 
-1) The code must begin with the word "START" and end with the word "FINISH". Everything in between these two words will be considered the statement input.
+1) The code must begin with the word "begin" and end with the word "end". Everything in between these two words will be considered the statement input.
 2) Each lexeme/token must be clearly separated with a space.
 
 # Statements
@@ -70,6 +70,17 @@ MEDIUM (16-bits) -> -32,768 to 32,767
 LARGE (32-bits) -> -2,147,483,648 to 2,147,483,647
 
 GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
+
+**Test Cases**
+
+4 total test cases:
+
+2 Passed
+
+1 fail test containing lexical errors: failed2_lexical_error has => incorrect data type size (line 5,7,13), number starting variable (line 7,13), illegal character (line 10). Atleast 5 lexical errors.
+
+1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), no space separating + and 5 (line 4), an additional space (line 6), no semicolon (line 4,7,10,11). Atleast 5 syntax errors.
+
 
 
 **Production Rules**
