@@ -7,10 +7,10 @@
 
 # Statements
 
-*Assignment
-*Condition
-*Declaration
-*Loop
+* Assignment
+* Condition
+* Declaration
+* Loop
 
 # Token Dictionary
 
