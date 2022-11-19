@@ -19,7 +19,7 @@
 
 'cond': "cond",
 
-'REFRESH': "REFRESH"
+'repeat': "repeat"
 
 **Arithmetic Order of Operations**
 
