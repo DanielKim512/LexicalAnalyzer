@@ -14,8 +14,11 @@
 **Keyword Indicators**
 
 'START': "START",
+
 'FINISH': "FINISH",
+
 'COND': "COND",
+
 'REFRESH': "REFRESH"
 
 **Arithmetic Order of Operations**
