@@ -33,17 +33,17 @@
 
 **Inequality/Equality Symbols**
 
-'GREATTHAN': ">",
+'greater': ">",
 
-'GREATTHANEQ': ">=",
+'greaterE': ">=",
 
-'LESSTHAN': "<",
+'less': "<",
 
-'LESSTHANEQ': "<=",
+'lessE': "<=",
 
-'EQUAL': "==",
+'equal': "==",
 
-'NOTEQUAL': "!="
+'notE': "!="
 
 'ASSIGNMENT': "="
 
