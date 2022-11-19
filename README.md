@@ -95,7 +95,7 @@ GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
     <as_s> --> <var> = <expression> `;`
     <declaration> --> <datatype> <var> `;`
     <datatype> --> (SMALL|MEDIUM|LARGE|GARGANTUAN)    
-    <var> -->  [a-zA-Z_]{6,8} // our variable rule    
+    <var> -->  [a-zA-Z_]{6,8}   
     <expression> --> <term> { (`*`|`\` ) <term> }    
     <term> --> <term> { (`+`|`-`) <term> }    
     <factor> --> [0-9]+ | <var>  | `(` <expression> `)`    
