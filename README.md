@@ -49,9 +49,9 @@
 
 **Miscellaneous**
 
-'LEFTPAREN': "(",
+'left': "(",
 
-'RIGHTPAREN': ")",
+'right': ")",
 
 'BLOCKSTART': "{",
 
