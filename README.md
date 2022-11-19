@@ -85,7 +85,7 @@ GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 # Production Rules
 
-<Program> --> Begin <stmt_list> End
+> <Program> --> Begin <stmt_list> End
 
 <stmt_list> --> {<stmt> `;`}
 
