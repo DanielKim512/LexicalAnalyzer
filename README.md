@@ -5,8 +5,16 @@
 2) Each lexeme/token must be clearly separated with a space.
 
 # Statements
-
 "ACDL" aka Assignment, Condition, Declaration, and Loop
 
-**Assignment**
-efwf
+# Tokens
+
+**Arithmetic Order of Operations**
+
+'ADDITION': '+',
+'SUBTRACTION': "-",
+'MULTIPLICATION': "*",
+'DIVISION': "/"
+'LEFTPAREN': "(",
+'RIGHTPAREN': ")"
+
