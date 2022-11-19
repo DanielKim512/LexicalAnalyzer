@@ -26,63 +26,63 @@
 
 **Arithmetic Order of Operations**
 
-'plus': '+',
+    'plus': '+',
 
-'minus': "-",
+    'minus': "-",
 
-'multiply': "*",
+    'multiply': "*",
 
-'divide': "/"
+    'divide': "/"
 
 **Inequality/Equality Symbols**
 
-'greater': ">",
+    'greater': ">",
 
-'greaterE': ">=",
+    'greaterE': ">=",
 
-'less': "<",
+    'less': "<",
 
-'lessE': "<=",
+    'lessE': "<=",
 
-'equal': "==",
+    'equal': "==",
 
-'notE': "!="
+    'notE': "!="
 
-'assign': "="
+    'assign': "="
 
 **Miscellaneous**
 
-'left': "(",
+    'left': "(",
 
-'right': ")",
+    'right': ")",
 
-'blockOpen': "{",
+    'blockOpen': "{",
 
-'blockClose': "}",
+    'blockClose': "}",
 
-'mod': "%",
+    'mod': "%",
 
-'FLRDIV': "$"
+    'FLRDIV': "$"
 
 **Data Types**
 
-SMALL (8-bits) -> -128 to 127
+    SMALL (8-bits) -> -128 to 127
 
-MEDIUM (16-bits) -> -32,768 to 32,767
+    MEDIUM (16-bits) -> -32,768 to 32,767
 
-LARGE (32-bits) -> -2,147,483,648 to 2,147,483,647
+    LARGE (32-bits) -> -2,147,483,648 to 2,147,483,647
 
-GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
+    GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 # Test Cases
 
-4 total test cases:
+    4 total test cases:
 
-2 Passed
+    2 Passed
 
-1 fail test containing lexical errors: failed2_lexical_error has => incorrect data type size (line 5,7,13), number starting variable (line 7,13), illegal character (line 10). Atleast 5 lexical errors.
+    1 fail test containing lexical errors: failed2_lexical_error has => incorrect data type size (line 5,7,13), number starting variable (line 7,13), illegal character     (line 10). Atleast 5 lexical errors.
 
-1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), no space separating + and 5 (line 4), an additional space (line 6), no semicolon (line 4,7,10,11). Atleast 5 syntax errors.
+    1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), no space separating + and 5 (line 4), an additional space (line 6), no        semicolon (line 4,7,10,11). Atleast 5 syntax errors.
 
 
 
