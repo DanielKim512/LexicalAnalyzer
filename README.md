@@ -23,13 +23,13 @@
 
 **Arithmetic Order of Operations**
 
-'ADDITION': '+',
+'plus': '+',
 
-'SUBTRACTION': "-",
+'minus': "-",
 
-'MULTIPLICATION': "*",
+'times': "*",
 
-'DIVISION': "/"
+'divide': "/"
 
 **Inequality/Equality Symbols**
 
