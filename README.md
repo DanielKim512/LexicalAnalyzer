@@ -70,13 +70,13 @@
 
 **Data Types**
 
-    SMALL (8-bits) -> -128 to 127
+    SMALL (1 byte) -> -128 to 127
 
-    MEDIUM (16-bits) -> -32,768 to 32,767
+    MEDIUM (2 byte) -> -32,768 to 32,767
 
-    LARGE (32-bits) -> -2,147,483,648 to 2,147,483,647
+    LARGE (4 byte) -> -2,147,483,648 to 2,147,483,647
 
-    GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
+    GARGANTUAN (8 byte) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 # Test Cases
 
