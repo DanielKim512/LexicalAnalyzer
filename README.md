@@ -7,7 +7,10 @@
 
 # Statements
 
-"ACDL" aka Assignment, Condition, Declaration, and Loop
+*Assignment
+*Condition
+*Declaration
+*Loop
 
 # Token Dictionary
 
