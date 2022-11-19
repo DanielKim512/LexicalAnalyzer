@@ -87,9 +87,9 @@ GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 
 # Production Rules
-
-  <Program> --> Begin <stmt_list> End
-  <stmt_list> --> {<stmt> `;`}
+    <Program> --> Begin <stmt_list> End
+    
+    <stmt_list> --> {<stmt> `;`}
   <stmt> --> <if_stmt> | <while_stmt> | <as_s>  | <declaration>
   <if_stmt> --> cond <bool> `{` { <stmt> ';'} `}`
   <while_stmt> --> repeat `{` <bool> { <stmt> ';' } `}`
