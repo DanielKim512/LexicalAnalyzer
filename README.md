@@ -87,48 +87,28 @@ GARGANTUAN (64-bits) -> -9,223,372,036,854,775,808 to 9,223,372,036,854,775,808
 
 
 # Production Rules
-    <Program> --> Begin <stmt_list> End
-    
-    <stmt_list> --> {<stmt> `;`}
-    
-    <stmt> --> <if_stmt> | <while_stmt> | <as_s>  | <declaration>
-    
-    <if_stmt> --> cond <bool> `{` { <stmt> ';'} `}`
-    
-    <while_stmt> --> repeat `{` <bool> { <stmt> ';' } `}`
-    
+    <Program> --> Begin <stmt_list> End    
+    <stmt_list> --> {<stmt> `;`}    
+    <stmt> --> <if_stmt> | <while_stmt> | <as_s>  | <declaration>   
+    <if_stmt> --> cond <bool> `{` { <stmt> ';'} `}`  
+    <while_stmt> --> repeat `{` <bool> { <stmt> ';' } `}` 
     <as_s> --> <var> = <expression> `;`
-    
     <declaration> --> <datatype> <var> `;`
-
-    <datatype> --> (SMALL|MEDIUM|LARGE|GARGANTUAN)
-    
-    <var> -->  [a-zA-Z_]{6,8} // our variable rule
-    
-    <expression> --> <term> { (`*`|`\` ) <term> }
-    
-    <term> --> <term> { (`+`|`-`) <term> }
-    
-    <factor> --> [0-9]+ | <var>  | `(` <expression> `)`
-    
+    <datatype> --> (SMALL|MEDIUM|LARGE|GARGANTUAN)    
+    <var> -->  [a-zA-Z_]{6,8} // our variable rule    
+    <expression> --> <term> { (`*`|`\` ) <term> }    
+    <term> --> <term> { (`+`|`-`) <term> }    
+    <factor> --> [0-9]+ | <var>  | `(` <expression> `)`    
     <bool> --> <expression> (`<=`|`>=` | `<` | `>`) <expression>
 
-    E --> E + T             Expression + Term
-    
-    E --> E - T             Expression - Term
-    
-    E --> T                 Some expression can be a term
-    
-    T --> T * F             Term * Factor
-    
-    T --> T / F             Term / Factor
-    
-    F --> -F                Unary Minus
-    
-    F --> +F                Unary Plus
-    
-    E --> a                 Factor can be a constant
-    
+    E --> E + T             Expression + Term    
+    E --> E - T             Expression - Term    
+    E --> T                 Some expression can be a term   
+    T --> T * F             Term * Factor   
+    T --> T / F             Term / Factor   
+    F --> -F                Unary Minus 
+    F --> +F                Unary Plus  
+    E --> a                 Factor can be a constant   
     E --> (e)               Factor can be an expression in parentheses
 
 
