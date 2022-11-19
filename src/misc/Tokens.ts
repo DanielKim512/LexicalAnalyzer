@@ -1,0 +1,25 @@
+const Tokens = {
+  assign: "=",
+  finish: "END",
+  start: "BEGIN",
+  cond: "cond",
+  repeat: "repeat",
+  plus: "+",
+  minus: "-",
+  multiply: "*",
+  divide: "/",
+  mod: "%",
+  FLRDIV: "$",
+  greater: ">",
+  less: "<",
+  greaterE: ">=",
+  lessE: "<=",
+  equal: "==",
+  notE: "!=",
+  left: "(",
+  right: ")",
+  blockOpen: "{",
+  blockClose: "}",
+};
+
+export default Tokens;
