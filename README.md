@@ -1,10 +1,12 @@
 # LexicalAnalyzer
 
 # Lexical Rules
+
 1) The code must begin with the word "START" and end with the word "FINISH". Everything in between these two words will be considered the statement input.
 2) Each lexeme/token must be clearly separated with a space.
 
 # Statements
+
 "ACDL" aka Assignment, Condition, Declaration, and Loop
 
 # Token Dictionary
@@ -34,6 +36,7 @@
 'ASSIGNMENT': "="
 
 **Miscellaneous**
+
 'LEFTPAREN': "(",
 'RIGHTPAREN': ")",
 'BLOCKSTART': "{",
@@ -42,6 +45,7 @@
 'FLOORDVSON': "$"
 
 **Data Types**
+
 small (8-bits) -> -128 to 127
 medium (16-bits) -> -32,768 to 32,767
 large (32-bits) -> -2,147,483,648 to 2,147,483,647
