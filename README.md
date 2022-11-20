@@ -114,11 +114,12 @@
     E --> T                 Some expression can be a term   
     T --> T * F             Term * Factor   
     T --> T / F             Term / Factor   
+    T --> F                 Factor
     F --> -F                Unary Minus 
     F --> +F                Unary Plus  
-    E --> a                 Factor can be a constant   
-    E --> (e)               Factor can be an expression in parentheses
+    F --> (E)               Parenthesis expression Factor  
+    F --> c                 Constant Factor
     
-    The production rule set conforms to the standard of an LL Grammar and is not ambiguous. It should be read from left to right.
+    The production rule set conforms to the standard of an LR Grammar and is not ambiguous. 
 
 
