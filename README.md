@@ -27,6 +27,8 @@
     'cond': "cond",
 
     'repeat': "repeat"
+    
+    'var' : "[a-zA-Z]{6,8}"
 
 **Arithmetic Order of Operations**
 
