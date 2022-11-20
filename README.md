@@ -86,9 +86,12 @@
 
     2 Passed
 
-    1 fail test containing lexical errors: failed2_lexical_error has => incorrect data type size (line 5,7,13), number starting variable (line 7,13), illegal character     (line 10). Atleast 5 lexical errors.
+    1 fail test containing lexical errors: failed2_lexical_error has => incorrect data type size (line 5,7,13), 
+    
+    number starting variable (line 7,13), illegal character (line 10). Atleast 5 lexical errors.
 
-    1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), no space separating + and 5 (line 4), an additional space (line 6), no        semicolon (line 4,7,10,11). Atleast 5 syntax errors.
+    1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), 
+    no space separating + and 5 (line 4), an additional space (line 6), no semicolon (line 4,7,10,11). Atleast 5 syntax errors.
     
 # Order of Operations Priority
 
