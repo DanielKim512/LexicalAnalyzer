@@ -90,11 +90,7 @@
     
 # Order of Operations Priority
 
-* ()
-*  +
-*  -
-*  *
-*  /
+(), +, -, *, /
 
 # Production Rules
     <Program> --> Begin <stmt_list> End    
