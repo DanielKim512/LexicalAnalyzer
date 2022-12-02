@@ -115,14 +115,21 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     
 **LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
     E => TE'
+    
     E' => +TE' | -TE' | Ɛ
+    
     T => FT'
+    
     T' => *FT' | /FT' | Ɛ
+    
     F => -F | +F| (E) | id
     
 **Pairwise Disjoint Test: The rules pass the pairwise disjointness test**
+
     FIRST(E') => {+T,-T}
+    
     FIRST(T') => {*F,/F}
+    
     FIRST(F) => {-F,+F,(E),id}
 
 
