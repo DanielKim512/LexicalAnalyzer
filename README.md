@@ -20,7 +20,7 @@
 
     'condition': "condi"
 
-    'repeat': "repeat"
+    'refresh': "refresh"
     
     'variable' : "[a-zA-Z_]" Note: Must follow Lexical Rule Number 5.
 
