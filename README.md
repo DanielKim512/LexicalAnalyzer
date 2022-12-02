@@ -46,7 +46,7 @@
 
     'equal': "==",
 
-    'notE': "!="
+    'notequal': "!="
 
     'assign': "="
 
