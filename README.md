@@ -9,26 +9,20 @@
 5) Variable names have a maximum of 8 letters and a minimum of 6 letters. Underscores allowed, but numbers not allowed.
 6) Handles keywords for loops, data type declaration, and selection statements. Keywords created below.
 
-# Statements
-
-* Assignment
-* Condition
-* Declaration
-* Loop
 
 # Token Dictionary
 
 **Keyword Indicators**
 
-    'start': "BEGIN",
+    'start': "begin"
 
-    'finish': "END",
+    'finish': "end"
 
-    'cond': "cond",
+    'condition': "condi"
 
     'repeat': "repeat"
     
-    'var' : "[a-zA-Z]{6,8}"
+    'variable' : "[a-zA-Z_]" Note: Must follow Lexical Rule Number 5.
 
 **Arithmetic Order of Operations**
 
@@ -58,17 +52,16 @@
 
 **Miscellaneous**
 
-    'left': "(",
+    'leftp': "("
 
-    'right': ")",
+    'rightp': ")"
 
-    'blockOpen': "{",
+    'braceL': "{"
 
-    'blockClose': "}",
+    'braceR': "}"
 
-    'mod': "%",
+    'mod': "%"
 
-    'FLRDIV': "$"
 
 **Data Types**
 
@@ -93,12 +86,20 @@
     1 fail test containing syntax errors: failed1_syntax_error has => 2 semi colons (line 3), 
     no space separating + and 5 (line 4), an additional space (line 6), no semicolon (line 4,7,10,11). Atleast 5 syntax errors.
     
-# Order of Operations Priority
-
-(), +, -, *, /
 
 # Production Rules
-    <Program> --> Begin <stmt_list> End    
+
+**Order of Operations Priority**
+
+(),^, +, -, *, / (PEASMD) Note: Enforced a non PEMDAS (BODMAS) order of operation with 6 levels of precedence.
+
+**Loop, Variable, and Selection Keywords**
+
+Code does not contain the following keywords: while, for, do, if, int, short, long
+
+**Structure of the language**
+
+    <Start> --> begin <stmt_list> end    
     <stmt_list> --> {<stmt> `;`}    
     <stmt> --> <if_stmt> | <while_stmt> | <as_s>  | <declaration>   
     <if_stmt> --> cond <bool> `{` { <stmt> ';'} `}`  
@@ -111,18 +112,20 @@
     <term> --> <term> { (`+`|`-`) <term> }    
     <factor> --> [0-9]+ | <var>  | `(` <expression> `)`    
     <bool> --> <expression> (`<=`|`>=` | `<` | `>`) <expression>
-
-    E --> E + T             Expression + Term    
-    E --> E - T             Expression - Term    
-    E --> T                 Some expression can be a term   
-    T --> T * F             Term * Factor   
-    T --> T / F             Term / Factor   
-    T --> F                 Factor
-    F --> -F                Unary Minus 
-    F --> +F                Unary Plus  
-    F --> (E)               Parenthesis expression Factor  
-    F --> c                 Constant Factor
     
-    The production rule set conforms to the standard of an LR Grammar and is not ambiguous. 
+**LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
+    E => TE'
+    E' => +TE' | -TE' | Ɛ
+    T => FT'
+    T' => *FT' | /FT' | Ɛ
+    F => -F | +F| (E) | id
+    
+**Pairwise Disjoint Test: The rules pass the pairwise disjointness test**
+    FIRST(E') => {+T,-T}
+    FIRST(T') => {*F,/F}
+    FIRST(F) => {-F,+F,(E),id}
+
+
+   
 
 
