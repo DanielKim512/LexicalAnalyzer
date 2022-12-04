@@ -91,7 +91,7 @@
 
 **Order of Operations Priority**
 
-(),^, +, -, *, / (PEASMD) Note: Enforced a non PEMDAS (BODMAS) order of operation with 6 levels of precedence.
+(),%, +, -, *, / (PEASMD) Note: Enforced a non PEMDAS (BODMAS) order of operation with 6 levels of precedence.
 
 **Loop, Variable, and Selection Keywords**
 
