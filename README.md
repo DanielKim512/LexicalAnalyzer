@@ -26,6 +26,8 @@
 
 **Arithmetic Order of Operations**
 
+    'mod': "%"
+    
     'plus': '+',
 
     'minus': "-",
@@ -59,8 +61,6 @@
     'braceL': "{"
 
     'braceR': "}"
-
-    'mod': "%"
 
 
 **Data Types**
@@ -100,18 +100,18 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
 **Structure of the language**
 
     <Start> --> begin <stmt_list> end    
-    <stmt_list> --> {<stmt> `;`}    
-    <stmt> --> <if_stmt> | <while_stmt> | <as_s>  | <declaration>   
-    <if_stmt> --> cond <bool> `{` { <stmt> ';'} `}`  
-    <while_stmt> --> repeat `{` <bool> { <stmt> ';' } `}` 
-    <as_s> --> <var> = <expression> `;`
-    <declaration> --> <datatype> <var> `;`
-    <datatype> --> (SMALL|MEDIUM|LARGE|GARGANTUAN)    
-    <var> -->  [a-zA-Z_]{6,8}   
-    <expression> --> <term> { (`*`|`\` ) <term> }    
-    <term> --> <term> { (`+`|`-`) <term> }    
-    <factor> --> [0-9]+ | <var>  | `(` <expression> `)`    
-    <bool> --> <expression> (`<=`|`>=` | `<` | `>`) <expression>
+    <stmt_list> --> { <stmt> }    
+    <stmt> --> <if_stmt> | <while_stmt> | <assign_stmt>  | <dec_stmt>   
+    <if_stmt> --> cond <bool> { { <stmt> } } 
+    <while_stmt> --> refresh { <bool> { <stmt> } } 
+    <assign_stmt> --> <variable> = <expression> 
+    <dec_stmt> --> <dtype> <variable>
+    <dtype> --> ( SMALL | MEDIUM | LARGE | GARGANTUAN )    
+    <variable> -->  [a-zA-Z_]   
+    <expression> --> <term> { ( * | \ ) <term> }    
+    <term> --> <term> { ( + | - ) <term> }    
+    <factor> --> [0-9]+ | <variable>  | ( <expression> )   
+    <bool> --> <expression> ( <= | >= | < | > | != ) <expression>
     
 **LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
     E => TE'
