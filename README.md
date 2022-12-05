@@ -91,7 +91,7 @@
 
 **Order of Operations Priority**
 
-(),%, +, -, *, / (PEASMD) Note: Enforced a non PEMDAS (BODMAS) order of operation with 6 levels of precedence.
+(), +, -, *, /, % (PASMDM) Note: Enforced a non PEMDAS (BODMAS) order of operation with 6 levels of precedence.
 
 **Loop, Variable, and Selection Keywords**
 
@@ -106,6 +106,7 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     <while_stmt> --> refresh { <bool> { <stmt> } } 
     <assign_stmt> --> <variable> = <expression> 
     <dec_stmt> --> <dtype> <variable>
+    <int_l> -->
     <dtype> --> ( SMALL | MEDIUM | LARGE | GARGANTUAN )      
     <expression> --> <term> { ( * | \ ) <term> }    
     <term> --> <term> { ( + | - ) <term> }    
@@ -122,15 +123,15 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     
     T' => *FT' | /FT' | Ɛ
     
-    F => -F | +F| (E) | id
+    F => +F | -F | (E) | id
     
-**Pairwise Disjoint Test: The rules pass the pairwise disjointness test**
+**Pairwise Disjoint Test: The rules pass the pairwise disjointness test. Therfore, it can be parsed in top-down fashion satisfying it being LL Grammar.**
 
     FIRST(E') => {+T,-T}
     
     FIRST(T') => {*F,/F}
     
-    FIRST(F) => {-F,+F,(E),id}
+    FIRST(F) => {+F,-F,(E),id}
 
 
    
