@@ -97,41 +97,35 @@
 
 Code does not contain the following keywords: while, for, do, if, int, short, long
 
-**Structure of the language**
+**Structure of the language** 
+
+**LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
 
     <Start> --> begin <stmt_list> end    
     <stmt_list> --> { <stmt> }    
     <stmt> --> <if_stmt> | <while_stmt> | <assign_stmt>  | <dec_stmt>   
     <if_stmt> --> cond <bool> { { <stmt> } } 
     <while_stmt> --> refresh { <bool> { <stmt> } } 
-    <assign_stmt> --> <variable> = <expression> 
+    <assign_stmt> --> <variable> = E
     <dec_stmt> --> <dtype> <variable>
-    <int_l> -->
-    <dtype> --> ( SMALL | MEDIUM | LARGE | GARGANTUAN )      
-    <expression> --> <term> { ( * | \ ) <term> }    
-    <term> --> <term> { ( + | - ) <term> }    
-    <factor> --> [0-9]+ | <variable>  | ( <expression> )   
-    <bool> --> <expression> ( <= | >= | < | > | != ) <expression>
-    
-**LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
-
-    E => TE'
-    
+    <variable> --> Σ = [a-zA-Z_] 
+    <dtype> --> ( SMALL = <-128 < <int_literal> < 127 | MEDIUM =  -32,768 < <int_literal> < 32,767 | LARGE = -2,147,483,648 < <int_literal> < 2,147,483,647 | GARGANTUAN =  -9,223,372,036,854,775,808 < <int_literal> < 9,223,372,036,854,775,808)    
+    <int_literal> --> ( 0 | 1 | ... | 9 )
+    <bool> --> E ( <= | >= | < | > | != ) 
+    E => TE' 
     E' => +TE' | -TE' | Ɛ
-    
     T => FT'
-    
     T' => *FT' | /FT' | Ɛ
-    
     F => +F | -F | (E) | id
     
 **Pairwise Disjoint Test: The rules pass the pairwise disjointness test. Therfore, it can be parsed in top-down fashion satisfying it being LL Grammar.**
 
-    FIRST(E') => {+T,-T}
-    
-    FIRST(T') => {*F,/F}
-    
-    FIRST(F) => {+F,-F,(E),id}
+    FIRST(<stmt>) => {cond, refresh, Σ, SMALL, MEDIUM, LARGE, GARGANTUAN} Pass
+    FIRST(<dtype>) => {SMALL, MEDIUM, LARGE, GARGANTUAN} Pass
+    FIRST(<int_literal>) => {0,1,2,3,4,5,6,7,8,9} Pass
+    FIRST(E') => {+T,-T, Ɛ} Pass 
+    FIRST(T') => {*F,/F, Ɛ} Pass
+    FIRST(F) => {+F,-F,(E),id} Pass
 
 
    
