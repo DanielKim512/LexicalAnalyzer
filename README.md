@@ -106,8 +106,7 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     <while_stmt> --> refresh { <bool> { <stmt> } } 
     <assign_stmt> --> <variable> = <expression> 
     <dec_stmt> --> <dtype> <variable>
-    <dtype> --> ( SMALL | MEDIUM | LARGE | GARGANTUAN )    
-    <variable> -->  [a-zA-Z_]   
+    <dtype> --> ( SMALL | MEDIUM | LARGE | GARGANTUAN )      
     <expression> --> <term> { ( * | \ ) <term> }    
     <term> --> <term> { ( + | - ) <term> }    
     <factor> --> [0-9]+ | <variable>  | ( <expression> )   
