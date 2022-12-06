@@ -144,6 +144,22 @@ NO! The production rules have unambiguous grammar. This means that every output 
 ![image](https://user-images.githubusercontent.com/97625923/205799280-3e74ac6a-a8d3-47f6-8663-fa06cb19c34f.png)
 
 
+**Okay, time for 2 correct token inputs with atleast 6 tokens**
+
+#1 Start with a good ol' "begin cond num > { { Σ = num } } end"   Note: This is 12 tokens long
+
+Trace:
+
+![image](https://user-images.githubusercontent.com/97625923/205802317-c114c6ce-1a98-4bb6-8ded-4dfdf45af4f0.png)
+
+Beautiful looking Parse Tree:
+
+![image](https://user-images.githubusercontent.com/97625923/205801189-4ff14406-ae61-4e2c-953b-4ab11a890f4c.png)
+
+#2 6 Token long Correct version: "begin SMALL Σ = num end"
+
+![image](https://user-images.githubusercontent.com/97625923/205802120-b6b74067-2e22-4f33-b76a-7a955cbd5a89.png)
+
 
    
 
