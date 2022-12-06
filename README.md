@@ -137,7 +137,7 @@ NO! The production rules have unambiguous grammar. This means that every output 
 ![image](https://user-images.githubusercontent.com/97625923/205797890-6c98871b-4326-4d84-9ae7-fcea913ff221.png)
 
 
-![image](https://user-images.githubusercontent.com/97625923/205798026-d0eeeefc-4a70-4734-ae0e-e90925feafd3.png)
+![image](https://user-images.githubusercontent.com/97625923/205803075-19ea1e32-6ea9-4543-a1d0-299fd30c8ae6.png)
 
 **Now the LR Table is quite huge so currently the picture only shows state 0 to 42. Let me know if you want to see it all**
 
