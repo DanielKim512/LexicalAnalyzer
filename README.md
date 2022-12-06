@@ -146,7 +146,7 @@ NO! The production rules have unambiguous grammar. This means that every output 
 
 **Okay, time for 2 correct token inputs with atleast 6 tokens**
 
-#1 Start with a good ol' "begin cond num > { { Σ = num } } end"   Note: This is 12 tokens long
+#1 Start with a good ol' "begin cond num > { { Σ = num } } end"   Note: This is 12 tokens long. This passes the test because it has the begin and end statement while passing through the if statement with the cond token. It has the correct bool statement usage as well as the braces covering the assign statement.
 
 Trace:
 
@@ -156,10 +156,37 @@ Beautiful looking Parse Tree:
 
 ![image](https://user-images.githubusercontent.com/97625923/205801189-4ff14406-ae61-4e2c-953b-4ab11a890f4c.png)
 
-#2 6 Token long Correct version: "begin SMALL Σ = num end"
+#2 6 Token long Correct version: "begin SMALL Σ = num end". This passes the test because it has the begin and end statement while passing through date type declaration which properly displays a variance an equal sign and an integer literal.
+
+Trace:
 
 ![image](https://user-images.githubusercontent.com/97625923/205802120-b6b74067-2e22-4f33-b76a-7a955cbd5a89.png)
 
+Parse Tree:
+
+![image](https://user-images.githubusercontent.com/97625923/205803703-0af0e160-00ef-42db-9fa9-6a9265afd8b6.png)
+
+**2 INCORRECT token inputs with atleast 6 tokens**
+
+#1 Start off with a simple glaring errors: "cond num > { { Σ = num } )". It doesnt start with begin and end with end token. In addition, one of the right braces is a right parenthesis. This is just wrong.
+
+Trace:
+
+![image](https://user-images.githubusercontent.com/97625923/205804626-dbb172bf-761d-486c-98c4-43debcc242de.png)
+
+Parse Tree:
+
+NONE! The code can't even start to read this.
+
+#2 A juicy one: "begin rwfresh { num * Σ / num + num >= { Σ == num } } endd". Oh man, if only you were good at spelling correctly this would be a correct token output. rwfresh instead of refresh, == instead of =, endd instead of end  <= These are the mistakes found in this token input.
+
+Trace:
+
+![image](https://user-images.githubusercontent.com/97625923/205805634-ad9c164c-36ed-45d0-b10f-04b20ddc99d8.png)
+
+Parse Tree:
+
+NONE! The code can't even start to read this.
 
    
 
