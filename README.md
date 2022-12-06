@@ -99,32 +99,50 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
 
 **Structure of the language** 
 
-**LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. Provides unambiguous grammar**
+**LL Grammar (Top-Down Parsing): Remove left recursion using algorithm to avoid infinite recursion. **
 
     <Start> --> begin <stmt> end      
     <stmt> --> <if_stmt> | <while_stmt> | <assign_stmt>  | <dec_stmt>   
     <if_stmt> --> cond <bool> { { <stmt> } } 
     <while_stmt> --> refresh { <bool> { <stmt> } } 
-    <assign_stmt> --> <variable> = E
-    <dec_stmt> --> <dtype> <variable>
-    <bool> --> E ( <= | >= | < | > | != ) 
-    <variable> --> Σ = [a-zA-Z_] 
-    <dtype> --> ( SMALL = <-128 < <int_literal> < 127 | MEDIUM =  -32,768 < <int_literal> < 32,767 | LARGE = -2,147,483,648 < <int_literal> < 2,147,483,647 | GARGANTUAN =  -9,223,372,036,854,775,808 < <int_literal> < 9,223,372,036,854,775,808)    
-    <int_literal> --> ( 0 | 1 | ... | 9 )
+    <assign_stmt> --> <variable> = F
+    <dec_stmt> --> <dtype> <variable> = <int_literal> 
+    <bool> --> E <inequality>
+    <inequality> --> ( <= | >= | < | > | != ) 
+    <variable> --> Σ           Note: Σ = [a-zA-Z_]
+    <dtype> --> ( SMALL | MEDIUM  | LARGE  | GARGANTUAN )    
+    <int_literal> --> num        Note: Δ = [0-9]
 
-    E => T E' 
-    E' => + T E' | -T E' | Ɛ
-    T => F T'
-    T' => * F T' | / F T' | Ɛ
-    F => + F | - F | ( E ) | id
+    <E> => <T> <E'> 
+    <E'> => + <T> <E'> | - <T> <E'> | Ɛ
+    <T> => <F> <T'>
+    <T'> => * <F> <T'> | / <F> <T'> | Ɛ
+    <F> => + <F> | - <F> | ( <E> ) | Σ | num
     
 **Pairwise Disjoint Test: The rules pass the pairwise disjointness test. Therfore, it can be parsed in top-down fashion satisfying it being LL Grammar.**
+    
+**YAY! TEST PASS JUST LIKE THIS TEST 2**
 
-    FIRST(<stmt>) => {cond, refresh, Σ, SMALL, MEDIUM, LARGE, GARGANTUAN} Pass
-    FIRST(<dtype>) => {SMALL, MEDIUM, LARGE, GARGANTUAN} Pass
-    FIRST(<int_literal>) => {0,1,2,3,4,5,6,7,8,9} Pass
-   
-![image](https://user-images.githubusercontent.com/97625923/205786002-7e2d3530-a38f-4fad-b6a8-5d54e8d7881a.png)
+![image](https://user-images.githubusercontent.com/97625923/205796943-148b714f-9f05-4a75-bf98-6163dcb3f254.png)
+
+
+**Are the Production Rules ambiguous?**
+
+NO! The production rules have unambiguous grammar. This means that every output is unique with no 2 or more parse trees producing the same output!
+
+# LR Parse Tables: Showing 4 tables, 4 traces, and the rules listed:
+
+**First showing the LR(1) grammar rules input**
+
+![image](https://user-images.githubusercontent.com/97625923/205797890-6c98871b-4326-4d84-9ae7-fcea913ff221.png)
+
+
+![image](https://user-images.githubusercontent.com/97625923/205798026-d0eeeefc-4a70-4734-ae0e-e90925feafd3.png)
+
+**Now the LR Table is quite huge so currently the picture only shows state 0 to 42. Let me know if you want to see it all**
+
+![image](https://user-images.githubusercontent.com/97625923/205799280-3e74ac6a-a8d3-47f6-8663-fa06cb19c34f.png)
+
 
 
    
