@@ -141,7 +141,7 @@ NO! The production rules have unambiguous grammar. This means that every output 
 
 **Now the LR Table is quite huge so currently the picture only shows state 0 to 42. Let me know if you want to see it all**
 
-![image](https://user-images.githubusercontent.com/97625923/205799280-3e74ac6a-a8d3-47f6-8663-fa06cb19c34f.png)
+![image](https://user-images.githubusercontent.com/97625923/205803323-2da0e697-3624-4038-973e-9287457e720b.png)
 
 
 **Okay, time for 2 correct token inputs with atleast 6 tokens**
