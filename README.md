@@ -22,7 +22,7 @@
 
     'refresh': "refresh"
     
-    'variable' : "[a-zA-Z_]" Note: Must follow Lexical Rule Number 5.
+    'variable' : "Σ"        Note: Σ = [a-zA-Z_] Must follow Lexical Rule Number 5.
 
 **Arithmetic Order of Operations**
 
@@ -106,12 +106,12 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     <if_stmt> --> cond <bool> { { <stmt> } } 
     <while_stmt> --> refresh { <bool> { <stmt> } } 
     <assign_stmt> --> <variable> = F
-    <dec_stmt> --> <dtype> <variable> = <int_literal> 
+    <dec_stmt> --> <dtype> <variable> = num       Note: num = [0-9]
     <bool> --> E <inequality>
     <inequality> --> ( <= | >= | < | > | != ) 
     <variable> --> Σ           Note: Σ = [a-zA-Z_]
     <dtype> --> ( SMALL | MEDIUM  | LARGE  | GARGANTUAN )    
-    <int_literal> --> num        Note: Δ = [0-9]
+           
 
     <E> => <T> <E'> 
     <E'> => + <T> <E'> | - <T> <E'> | Ɛ
@@ -121,7 +121,7 @@ Code does not contain the following keywords: while, for, do, if, int, short, lo
     
 **Pairwise Disjoint Test: The rules pass the pairwise disjointness test. Therfore, it can be parsed in top-down fashion satisfying it being LL Grammar.**
     
-**YAY! TEST PASS JUST LIKE THIS TEST 2**
+**YAY! TEST PASSED JUST LIKE THIS TEST 2**
 
 ![image](https://user-images.githubusercontent.com/97625923/205796943-148b714f-9f05-4a75-bf98-6163dcb3f254.png)
 
